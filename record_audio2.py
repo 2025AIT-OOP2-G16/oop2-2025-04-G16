@@ -35,4 +35,4 @@ for data in audio_data:
         arr, path_or_hf_repo="whisper-base-mlx"
     )
     text = result["text"]
-    print(text)
+    print(text,123)
