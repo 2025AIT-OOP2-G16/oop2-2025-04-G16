@@ -34,4 +34,5 @@ for data in audio_data:
     result = mlx_whisper.transcribe(
         arr, path_or_hf_repo="whisper-base-mlx"
     )
-    print(result["text"])
+    text = result["text"]
+    print(text)
