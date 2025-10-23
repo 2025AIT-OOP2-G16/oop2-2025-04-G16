@@ -1,7 +1,7 @@
 import ffmpeg
 import time
 
-# 録音時間（秒)
+# 録音時間（秒）
 duration = 10
 # 出力ファイル名
 output_file = 'oop-G16-output.wav'
