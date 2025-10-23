@@ -3,7 +3,7 @@ from pydub import AudioSegment
 import numpy as np
 
 # 音声ファイルを指定して文字起こし
-audio_file_path = "python-audio-output.wav"
+audio_file_path = "oop-G16-output.wav"
 
 result = mlx_whisper.transcribe(
   audio_file_path, path_or_hf_repo="whisper-base-mlx"
@@ -24,8 +24,7 @@ def preprocess_audio(sound):
 audio_data = []
 
 # 音声データを音声ファイルから読み取る
-audio_data.append(AudioSegment.from_file("audio-output-before.wav", format="wav"))
-audio_data.append(AudioSegment.from_file("audio-output-after.wav", format="wav"))
+audio_data.append(AudioSegment.from_file("oop-G16-output.wav", format="wav"))
 
 for data in audio_data:
     sound = preprocess_audio(data)
@@ -35,3 +34,8 @@ for data in audio_data:
         arr, path_or_hf_repo="whisper-base-mlx"
     )
     print(result["text"])
+
+    with open("oop-G16-output.txt", "w", encoding="utf-8") as f:
+        f.write(text)
+
+    print("文字起こし結果を 'oop-G16-output.txt' に保存しました。")
