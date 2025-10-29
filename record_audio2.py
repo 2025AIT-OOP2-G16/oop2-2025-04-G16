@@ -33,9 +33,5 @@ for data in audio_data:
     result = mlx_whisper.transcribe(
         arr, path_or_hf_repo="whisper-base-mlx"
     )
-    print(result["text"])
-
-    with open("oop-G16-output.txt", "w", encoding="utf-8") as f:
-        f.write(text)
-
-    print("文字起こし結果を 'oop-G16-output.txt' に保存しました。")
+textdata = result["text"]
+print(textdata)
