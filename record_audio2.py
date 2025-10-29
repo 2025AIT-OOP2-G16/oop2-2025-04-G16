@@ -8,7 +8,7 @@ audio_file_path = "oop-G16-output.wav"
 result = mlx_whisper.transcribe(
   audio_file_path, path_or_hf_repo="whisper-base-mlx"
 )
-print(result)
+#print(result)
 
 
 # 音声データを指定して文字起こし
@@ -33,5 +33,5 @@ for data in audio_data:
     result = mlx_whisper.transcribe(
         arr, path_or_hf_repo="whisper-base-mlx"
     )
-textdata = result["text"]
+    textdata = result["text"]
 print(textdata)
