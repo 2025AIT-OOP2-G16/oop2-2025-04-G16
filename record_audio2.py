@@ -34,4 +34,3 @@ for data in audio_data:
         arr, path_or_hf_repo="whisper-base-mlx"
     )
 textdata = result["text"]
-print(textdata)
